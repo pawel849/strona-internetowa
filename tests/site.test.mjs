@@ -75,6 +75,11 @@ test('lokalne zasoby produkcyjne istnieją', async () => {
     'assets/daniel.webp',
     'assets/david-testimonial.mp4',
     'assets/david-poster.webp',
+    'assets/daniel-testimonial.mp4',
+    'assets/daniel-testimonial-poster.webp',
+    'assets/pawel-paris-eiffel.webp',
+    'assets/pawel-portrait.webp',
+    'assets/pawel-paris-louvre.webp',
     'assets/og-image.webp'
   ];
   for (const path of required) {
@@ -137,5 +142,18 @@ test('referencje rozróżniają Davida i Dawida jako dwie osoby', async () => {
     'Referencja wideo od Davida, YouTubera',
     '<strong>David</strong><span>YouTuber</span>',
     '— Dawid, właściciel sklepu'
+  ]);
+});
+
+test('strona pokazuje Pawła i testimonial Daniela w lokalnych mediach', async () => {
+  const html = await read('index.html');
+  assertContainsAll(html, [
+    'Referencja wideo od Daniela Kondraciuka',
+    '<strong>Daniel Kondraciuk</strong><span>Branża infoproduktów</span>',
+    'assets/daniel-testimonial.mp4',
+    'assets/daniel-testimonial-poster.webp',
+    'Paweł Martwicki na tle wieży Eiffla w Paryżu',
+    'Portret Pawła Martwickiego',
+    'Paweł Martwicki przed Luwrem w Paryżu'
   ]);
 });
