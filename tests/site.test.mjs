@@ -130,3 +130,12 @@ test('zdjęcie wyniku zachowuje proporcję 4:5 na małych ekranach', async () =>
   assert.match(styles, /\.case-photo\{[^}]*aspect-ratio:4\/5/);
   assert.match(styles, /\.case-photo img\{[^}]*position:absolute[^}]*height:100%[^}]*object-fit:cover/);
 });
+
+test('referencje rozróżniają Davida i Dawida jako dwie osoby', async () => {
+  const html = await read('index.html');
+  assertContainsAll(html, [
+    'Referencja wideo od Davida, YouTubera',
+    '<strong>David</strong><span>YouTuber</span>',
+    '— Dawid, właściciel sklepu'
+  ]);
+});
