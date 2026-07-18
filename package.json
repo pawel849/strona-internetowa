@@ -1,0 +1,10 @@
+{
+  "name": "animad-consulting",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Strona internetowa Animad Consulting",
+  "scripts": {
+    "test": "node --test tests/site.test.mjs",
+    "serve": "npx --yes serve ."
+  }
+}
