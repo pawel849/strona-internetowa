@@ -71,7 +71,7 @@ test('dane prawne i polityka prywatności są dostępne', async () => {
 test('lokalne zasoby produkcyjne istnieją', async () => {
   const required = [
     'styles.css', 'script.js',
-    'assets/logo-animad.svg',
+    'assets/logo-animad.png',
     'assets/daniel.webp',
     'assets/david-testimonial.mp4',
     'assets/david-poster.webp',
