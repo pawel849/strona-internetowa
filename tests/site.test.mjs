@@ -35,9 +35,21 @@ test('gwarancja ma jawne i niesprzeczne zastrzeżenie', async () => {
   assertContainsAll(html, [
     'zwrot wynagrodzenia za usługę',
     'od dnia podpisania umowy',
-    'Budżet reklamowy nie podlega zwrotowi',
+    'Budżet przeznaczony na działania zewnętrzne nie podlega zwrotowi',
     'warunków określonych w umowie'
   ]);
+});
+
+test('oferta opisuje Proces Kwalifikowanych Zapytań bez etykiet commodity', async () => {
+  const html = await read('index.html');
+  assertContainsAll(html, [
+    'Wdrażamy system w dwa tygodnie',
+    'Docieramy przez ekskluzywny kanał',
+    'Skupiamy uwagę na Twoich usługach',
+    'Kwalifikujemy zapytania',
+    'My tworzymy klientów. Ty realizujesz zlecenia.'
+  ]);
+  assert.doesNotMatch(html, /reklam|marketing|kampani|Meta Ads|landing page|agencj/i);
 });
 
 test('CTA prowadzą do dostarczonego kalendarza i kontaktu', async () => {
