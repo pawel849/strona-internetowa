@@ -77,9 +77,7 @@ test('lokalne zasoby produkcyjne istnieją', async () => {
     'assets/david-poster.webp',
     'assets/daniel-testimonial.mp4',
     'assets/daniel-testimonial-poster.webp',
-    'assets/pawel-paris-eiffel.webp',
     'assets/pawel-portrait.webp',
-    'assets/pawel-paris-louvre.webp',
     'assets/og-image.webp'
   ];
   for (const path of required) {
@@ -152,8 +150,9 @@ test('strona pokazuje Pawła i testimonial Daniela w lokalnych mediach', async (
     '<strong>Daniel Kondraciuk</strong><span>Branża infoproduktów</span>',
     'assets/daniel-testimonial.mp4',
     'assets/daniel-testimonial-poster.webp',
-    'Paweł Martwicki na tle wieży Eiffla w Paryżu',
-    'Portret Pawła Martwickiego',
-    'Paweł Martwicki przed Luwrem w Paryżu'
+    'aria-label="Portret Pawła Martwickiego"',
+    'src="assets/pawel-portrait.webp"',
+    'alt="Paweł Martwicki"'
   ]);
+  assert.doesNotMatch(html, /assets\/pawel-paris-/);
 });

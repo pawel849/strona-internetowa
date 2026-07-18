@@ -151,9 +151,9 @@ h3{font-size:22px;line-height:1.2;margin-bottom:10px}
 
 .founder{padding-bottom:140px}
 .founder-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:120px;align-items:center}
-.founder-gallery{min-height:520px;position:relative;display:grid;grid-template-columns:1.18fr .82fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:10px;padding:10px;border:1px solid var(--light-line)}
+.founder-gallery{min-height:520px;position:relative;display:grid;padding:10px;border:1px solid var(--light-line)}
 .founder-gallery::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid var(--gold);pointer-events:none}
-.founder-photo{position:relative;z-index:1;min-width:0;min-height:0;margin:0;overflow:hidden;background:#0b1713}.founder-photo-main{grid-row:1/-1}.founder-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.76) contrast(1.03)}.founder-photo-main img{object-position:center 38%}.founder-gallery .founder-photo:nth-child(2) img{object-position:center 23%}.founder-gallery .founder-photo:nth-child(3) img{object-position:center 42%}
+.founder-photo{position:relative;z-index:1;min-width:0;min-height:0;margin:0;overflow:hidden;background:#0b1713}.founder-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 24%;filter:saturate(.76) contrast(1.03)}
 .founder-monogram{min-height:480px;border:1px solid var(--light-line);position:relative;display:grid;place-items:center;background:linear-gradient(135deg,rgba(255,255,255,.03),transparent)}
 .founder-monogram::before,.founder-monogram::after{content:"";position:absolute;background:var(--light-line)}.founder-monogram::before{width:1px;inset:0 auto 0 50%}.founder-monogram::after{height:1px;inset:50% 0 auto}
 .founder-monogram span{position:relative;z-index:1;font-family:"Newsreader",Georgia,serif;font-size:110px;color:var(--gold-light)}.founder-monogram i{position:absolute;bottom:22px;left:24px;font-style:normal;font-size:9px;text-transform:uppercase;letter-spacing:.16em;color:#8fa097}
